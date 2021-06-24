@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
-<title>Page Title</title>
+<title>MENU</title>
+<script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/menu.css" >
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+<div class="name">
+	<h1>JOE'S FAMILY DINER</h1>
+</div>
+		
+<table style="width:100%">
+  <tr>
+    <th>BreakFast</th>
+    <th>Lunch</th> 
+    <th>Beverages</th>
+  </tr>
+  <tr>
+    <td><label for="Pancakes"><b>Blueberry Pancakes</b></label>
+			<input type="checkbox" name="pancakes"/>$8.95</td>
+    <td><label for="burger"><b>Cheeseburger</b></label>
+			<input type="checkbox" name="burger"/>$10.95</td>
+    <td><label for="Coffee"><b>Black Coffee:</b></label>
+			<input type="checkbox" name="coffee" />$1.95</td>
+  </tr>
+  <tr>
+    <td><label for="Omelette"><b>Vegetable Omelette</b></label>
+			<input type="checkbox"  name="omlette"/>$8.95</td>
+    <td><label for="Wrap"><b>Teriyaki Wrap:</b></label>
+			<input type="checkbox" name="wrap" />$12.95</td>
+    <td><label for="Tea"><b>Green Tea:</b></label>
+			<input type="checkbox" name="tea" />$11.95</td>
+  </tr>
+  <tr>
+    <td> <label for="Croissant"><b>Croissant:</b></label>
+			<input type="checkbox" name="croissant"/>$5.95</td>
+    <td><label for="salad"><b>Ceasar Salad:</b></label>
+			<input type="checkbox" name="sald" />$13.95</td>
+    <td><label for="beer"><b>Corona Beer 12 oz:</b></label>
+			<input type="checkbox" name="Beer" />$5.95</td>
+  </tr>
+  <tr>
+    <td> <label for="Muffin"><b>Blueberry Muffin</b></label>
+			<input type="checkbox"  name="muffin"/>$8.95</td>
+    <td><label for="soup"><b>Tomato Soup:</b></label>
+			<input type="checkbox" name="soup" />$11.95</td>
+    <td><label for="Milk"><b>Chocolate Milk:</b></label>
+			<input type="checkbox" name="milk" />$3.95</td>
+  </tr>
+</table>
+   	  	<form>
+  			<input type="submit" value="Submit">
+		</form>
+   	  </div>
 </body>
 </html>

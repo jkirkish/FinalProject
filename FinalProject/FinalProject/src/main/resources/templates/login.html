@@ -2,21 +2,35 @@
 <html xmlns:th="http://thymeleaf.org">
 	<head>
 		<title>Login</title>
-		<script type="text/javascript">
-			
-		</script>
+		<script type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/login.css" >
 	</head>	
 	<body>
 		<h1>Login</h1>
-		<div>
-			Username: <input type="text" th:field="${user.username}"/>
-		</div>
-		<div>
-			Password: <input type="password" th:field="${user.password}"/>
-		</div>
-		<div>
-			<button type="button" id="submitBtn">Submit</button>
-		</div>
+		 <form action="menu.html" method="post">
+		   
+		   <div class= "imgcontainer">
+		   		<img src="css/vectorStockPng.png" alt="LogAvatar" class="avatar">
+		   </div>
+		  
+		   <div class="container">
+				<label for="uname"><b>Username:</b></label> 
+				<input type="text" placeholder="Enter Username" name= "uname" th:field="${user.username}">
+		   
+			<label for="psw"><b>Password:</b></label>
+			 <input type="password" placeholder="Enter Password" name="psw" th:field="${user.password}">
+		  
+			<button type="submit" id="submitBtn">Login</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember Me? 
+			</label>
+		   </div>
+		   
+		   <div class="container" style="background-color: #f1f1f1">
+		   <button type="button" class="cancelbtn">Cancel</button>
+		   <span class="psw">Forgot <a href="#">password?</a></span>
+		  </div>
 		<script type="text/javascript" src="/js/login.js"></script>
+	</form>
 	</body>
 </html>

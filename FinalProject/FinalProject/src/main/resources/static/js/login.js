@@ -15,7 +15,7 @@ submitBtn.addEventListener('click', () => {
 		users.push(user);
 	}
 })
-username.addEventListener('blur', () => {
+username.addEventListener('focus', () => {
 	var username = document.querySelector("#username")
 	var password = document.querySelector("#password")
 
