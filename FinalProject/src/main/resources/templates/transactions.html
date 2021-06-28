@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-<title>Checkout</title>
+<title>Transaction</title>
 <link rel="stylesheet" type="text/css" href="css/checkout.css" >
 </head>
 <body>
 
 <body>
-	<form action="" method="post" style="border:1px solid #ccc">
+	
+	<div>
+	<form action="" method="post" th:each="transaction : ${transactions}" style="border:1px solid #ccc">
 	  <div class="container">
-		<h1>Transaction</h1>
+		<h1>Pay Now</h1>
 		<p>Please fill out to submit Payment.</p>
 		<hr>
 	
@@ -26,9 +28,21 @@
            <button type="button" class="cancelbtn">Cancel</button>
            <button type="submit" class="signupbtn">Pay Now</button>
         </div>
-	</div>
+	 </div>
 	</form>
-		 
+	                 
+	<form  method="post">
+		<input type="submit" value="Delete Transaction"/>
+	</form>
+	
+</div>
+	
+	<div th:each="transaction : ${transactions}">
+		<span th:text="${transaction.transactionDate}"></span><br/>
+	    <span th:text="${transaction.amount}"></span><br/>
+	    <span th:text="${transaction.account}"></span>
+	    <hr/>
+	</div>	 
 
 </body>
 </html>
