@@ -1,14 +1,40 @@
-
-.name{
-	text-align: center;
-}
-
-table, th, td {
-  border: 1px solid black;
-  
-}
-input[type=submit]{
-	
-	margin-top: 25px;
-	
-}
+.form#my-form-id {
+  width   : 60em;
+  padding : .4em;
+  }
+button {
+  margin : 1em .4em 0 0;
+  width  : 6em;
+  }
+.cols-3-parts {
+  display   : flex;
+  flex-wrap : wrap;
+  }
+.cols-3-parts fieldset {
+  flex-grow : 1;
+  width     : 30%;
+  }
+.cols-3-parts fieldset label {
+  display : block;
+  float   : left;
+  clear   : left; 
+  }
+.cols-3-parts fieldset label b {
+  display       : inline-block;
+  width         : 11.4em;
+  text-overflow : "";
+  white-space   : nowrap;
+  overflow      : hidden;
+  }
+.cols-3-parts fieldset label b::after {
+  content     : '...............................';
+  color       : grey;
+  font-weight : normal;
+  }
+.cols-3-parts fieldset label input[type="checkbox"] {
+  vertical-align: top;
+  }
+.cols-3-parts fieldset label em {
+  font-size      : .8em;
+  vertical-align : top;
+  }
