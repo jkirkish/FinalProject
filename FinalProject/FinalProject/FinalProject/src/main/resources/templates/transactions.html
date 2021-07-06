@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Transaction</title>
+<link rel="stylesheet" type="text/css" href="css/checkout.css" >
+</head>
+<body>
+
+<body>
+	
+	<div>
+	<form action="" method="post" th:each="transaction : ${transactions}" style="border:1px solid #ccc">
+	  <div class="container">
+		<h1>Pay Now</h1>
+		<p>Please fill out to submit Payment.</p>
+		<hr>
+	
+		<label for="TransactionDate"><b>Date</b></label>
+		<input type="text" placeholder="Enter Date" name="date" th:field="${transaction.transactionDate}"required>
+		
+		<label for="amount"><b>Amount:</b></label>
+		<input type="text" placeholder="Enter the Amount" name="transAmount" th:field="${transaction.amount}" required/>
+	
+	    <label for="accountholder"><b>AccountHolder:</b></label>
+		<input type="text" placeholder="Enter the Account" name="account" th:field="${transaction.account}" required/>
+		
+		<div class="clearfix">
+           <button type="button" class="cancelbtn">Cancel</button>
+           <button type="submit" class="signupbtn">Pay Now</button>
+        </div>
+	 </div>
+	</form>
+	                 
+	<form  method="post">
+		<input type="submit" value="Delete Transaction"/>
+	</form>
+	
+</div>
+	
+	<div th:each="transaction : ${transactions}">
+		<span th:text="${transaction.transactionDate}"></span><br/>
+	    <span th:text="${transaction.amount}"></span><br/>
+	    <span th:text="${transaction.account}"></span>
+	    <hr/>
+	</div>	 
+
+</body>
+</html>
